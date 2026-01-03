@@ -55,7 +55,7 @@ jobs:
           git config --global user.name 'github actions bot'
           git config --global user.email 'invalid@example.com'
           git add _posts/*
-          git commit -m "added comment_ids"
+          git diff-index --quiet HEAD || git commit -m "added comment_ids"
           git push
 
   # Build job
