@@ -39,7 +39,7 @@ mastodon:
 > [!NOTE]
 > If you use the minima theme, this will also add a link to this account in the footer of your blog
 
-That should be it, you should be ready to go! Feel free to open an issue in case something does not work. And here of course to blog post, about this project (TODO) because where would be the fun otherwise, right?
+That should be it, you should be ready to go! Feel free to open an issue in case something does not work. And here of course to blog post, about this project (https://blog.twooceans.de/tech/2026/01/03/autopost.html) and the corresponding toot (https://troet.cafe/@overwhelming_complexity/115828460137138706) because where would be the fun otherwise, right?
 
 
 # Usage
@@ -50,6 +50,9 @@ You will also likely want to change the message that is being posted, together w
 # NOTE: 
 > [!WARNING]
 > The generation of links only works with explicitely provided links (using the permalink frontmatter) or the default link schema (it will also not work if you explicitely set the default schema in the permalink frontmatter)
+
+> [!WARNING]
+> There are also edge cases when the date frontmatter communicates a timezone: The links are always UTC, but may script does not consider this, so if the timezone goes over midnight in either direction, the link will be wrong
 
 # TODO
 - Make this easier to use, using git subsystems

@@ -142,7 +142,7 @@ def main():
             raise Exception("Could not parse Date")
         
         blog_url = config.get("url")
-        url = fm.get("permalink") or f"{blog_url}/{categories}/{str(date.year)}/{str(date.day)}/{path.name.split(".")[-2]}.html"
+        url = fm.get("permalink") or f"{blog_url}/{categories}/{str(date.year)}/{str(date.strftime("%m"))}/{str(date.strftime("%d"))}/{"-".join(path.name.split(".")[-2].split("-")[3:])}.html"
         toot = f"""Read my new post {title}:
 {url}
 
