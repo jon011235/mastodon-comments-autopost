@@ -50,7 +50,7 @@ jobs:
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
         run: python .github/scripts/toot_and_commit.py
       
-      - name: add_commit_push
+      - name: add_commit_push # To avoid an error if no new ids were added: https://stackoverflow.com/questions/8123674/how-to-git-commit-nothing-without-an-error
         run: |
           git config --global user.name 'github actions bot'
           git config --global user.email 'invalid@example.com'
